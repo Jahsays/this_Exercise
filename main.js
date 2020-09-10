@@ -85,3 +85,24 @@ var instructor = {
 
 instructor.info.data.logLocation() // Why might we be getting an error here?
  //TypeError. Because logLocation is not a function
+
+//  Part 2
+// Question 1
+// Fix the following code:
+var obj = {
+    fullName: "Harry Potter",
+    person: {
+        sayHi: function(){
+            return "This person's name is " + this.fullName
+        }
+    }
+}
+
+var obj = {
+    fullName: "Harry Potter",
+        sayHi: function(){
+            return "This person's name is " + this.fullName
+        }
+}
+
+obj.sayHi();
