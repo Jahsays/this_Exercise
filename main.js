@@ -106,3 +106,57 @@ var obj = {
 }
 
 obj.sayHi();
+
+// Question 2
+
+// Question 3
+function sumEvenArguments(){
+    let array = [].slice.call(arguments)
+    let sum = 0
+    for(let i = 0; i <= array.length; i++){
+        if(arr[i] % 2 ===0){
+            sum += arr[i]
+        }
+
+    }
+    return sum;
+}
+
+// Question 4
+
+// Question 5
+function invokeMax(fn, maxAmount){
+    let count = 0;
+    return function () {
+        let innerFn = [].slice.call(arguments);
+        if(count >= maxAmount){
+            return "Maxed Out";
+        } else {
+            return fn.apply(this, arguments);
+            count;
+        }
+    }
+}
+function add(a,b){
+    return a + b 
+}
+
+var addOnlyThreeTimes = invokeMax(add, 3);
+// Question 6
+function guessingGame(amount) {
+    var result = Math.floor(Math.random() * 10);
+    var guesses = 0;
+    return function(guess) {
+        guesses++;
+       if(guesses > amount){
+           return "Yoo're all done playing!";
+       } else if (result < guess) {
+           return "You're too high!";
+       } else if (result > guess){
+           return "You're too low!";
+       } else if (result === guess) {
+           return "You got it!";
+       }
+    }
+}
+var game = guessingGame(5);
