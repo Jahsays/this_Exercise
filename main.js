@@ -123,6 +123,7 @@ function sumEvenArguments(){
 }
 
 // Question 4
+// yet to figure
 
 // Question 5
 function invokeMax(fn, maxAmount){
